@@ -1,3 +1,9 @@
+:root {
+    --pg-background:       #2F2F2F; /* Grey            */
+    --pg-grid-background:  #373446; /* Purple          */
+    --pg-ready-background: #1B1B20; /* Dark Purple     */
+    --pg-grid-square:      #E7E6EF; /* Very Light Grey */
+}
 
 body {
     background-color: #B5446E; /* Pinky-purple */
