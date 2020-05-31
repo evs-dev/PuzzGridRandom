@@ -3,10 +3,11 @@
     --pg-grid-background:  #373446; /* Purple          */
     --pg-ready-background: #1B1B20; /* Dark Purple     */
     --pg-grid-square:      #E7E6EF; /* Very Light Grey */
+    --pg-logo-text:        #2821B3; /* Dark Blue       */
 }
 
 body {
-    background-color: #B5446E; /* Pinky-purple */
+    background-color: var(--pg-background); /*#B5446E;  Pinky-purple */
 }
 
 button {
@@ -18,8 +19,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    background-color: #9d19cb; /* Purple */
-    border: 8px solid #e46222;
+    background-color: var(--pg-grid-square); /*#9d19cb;  Purple */
+    border: 8px solid var(--pg-logo-text); /*#e46222;*/
     box-shadow: 0px 0px 50px black;
     cursor: pointer;
 
@@ -28,14 +29,15 @@ button {
     /* Text */
     font-family: Georgia;
     font-size: 650%;
-    color: white;
+    color: var(--pg-grid-background);
     text-align: center;
     text-decoration: none;
 }
 
 button:hover {
-    background-color: #aa46e8; /* Lighter purple */
     width: 85%;
     height: 85vh;
     font-size: 750%;
+    color: var(--pg-logo-text);
+    border-color: var(--pg-grid-background);
 }
