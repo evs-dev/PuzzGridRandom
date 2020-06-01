@@ -41,8 +41,8 @@ function addHistoryLink(gridNumber, url) {
     let a = document.createElement('a');
     // Make the visible text the grid number
     a.innerHTML = gridNumber;
-    // Make the URL the PuzzGrid link
-    a.href = url;
+    // Make the link call openSite with the PG URl
+    a.href = `javascript:openSite(\'${url}\')`;
 
     let div = window.historyDiv;
 
