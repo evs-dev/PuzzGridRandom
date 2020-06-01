@@ -41,6 +41,10 @@ button:hover {
     border-color: var(--pg-grid-background);
 }
 
+.historyDiv {
+    
+}
+
 /* LINKS */
 
 a {
