@@ -1,6 +1,6 @@
 const baseURL = "https://www.puzzgrid.com/grid/";
-const maxGrids = 31312; // Approximate number of grids on PuzzGrid
-                        // Last updated: 31/05/2020
+const maxGrids = 31358; // Approximate number of grids on PuzzGrid
+                        // Last updated: 01/06/2020
 
 let previousNumbers = [];
 
@@ -16,6 +16,9 @@ function random() {
     let url = baseURL + gridNumber.toString();
     openSite(url);
 
+    // Add link to this grid in historyDiv
+    addHistoryLink(gridNumber, url);
+
     // Save grid number so as to not open it again this session
     let length = previousNumbers.push(gridNumber);
 
@@ -27,4 +30,24 @@ function random() {
 
 function openSite(url) {
     window.open(url, '_blank')
+}
+
+window.onload = function() {
+    window.historyDiv = document.getElementById('history_div');
+}
+
+function addHistoryLink(gridNumber, url) {
+    // Create link element
+    let a = document.createElement('a');
+    // Make the visible text the grid number
+    a.innerHTML = gridNumber;
+    // Make the link call openSite with the PG URl
+    a.href = `javascript:openSite(\'${url}\')`;
+
+    let div = window.historyDiv;
+
+    // Insert a break as the first element in the history div
+    div.insertBefore(document.createElement('br'), div.childNodes[0]);
+    // Insert the link as the first element in the history div
+    div.insertBefore(a, div.childNodes[0]);
 }

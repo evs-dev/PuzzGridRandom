@@ -40,3 +40,33 @@ button:hover {
     color: var(--pg-logo-text);
     border-color: var(--pg-grid-background);
 }
+
+.historyDiv {
+    top: 50%;
+    float: right;
+    padding-top: 20vh;
+}
+
+/* LINKS */
+
+a {
+    font-family: Georgia;
+    color: white;
+    text-align: right;
+}
+
+/* Visited */
+a:visited {
+  color: white;
+}
+
+/* Mouse over
+a:hover {
+  color: hotpink;
+}
+
+Selected
+a:active {
+  color: blue;
+}
+*/
