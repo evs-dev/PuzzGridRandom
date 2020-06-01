@@ -16,6 +16,9 @@ function random() {
     let url = baseURL + gridNumber.toString();
     openSite(url);
 
+    // Add link to this grid in historyDiv
+    addHistoryLink(gridNumber, url);
+
     // Save grid number so as to not open it again this session
     let length = previousNumbers.push(gridNumber);
 
@@ -27,4 +30,20 @@ function random() {
 
 function openSite(url) {
     window.open(url, '_blank')
+}
+
+window.onload = function() {
+    window.historyDiv = document.getElementById('history_div');
+}
+
+function addHistoryLink(gridNumber, url) {
+    // Create link element
+    let a = document.createElement('a');
+    // Make the visible text the grid number
+    a.innerHTML = gridNumber;
+    // Make the URL the PuzzGrid link
+    a.href = url;
+
+    // Append the link to the history div
+    window.historyDiv.appendChild(a);
 }
