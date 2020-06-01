@@ -40,3 +40,26 @@ button:hover {
     color: var(--pg-logo-text);
     border-color: var(--pg-grid-background);
 }
+
+/* LINKS */
+
+a {
+    font-family: Georgia;
+    color: white;
+}
+
+/* Visited */
+a:visited {
+  color: white;
+}
+
+/* Mouse over
+a:hover {
+  color: hotpink;
+}
+
+Selected
+a:active {
+  color: blue;
+}
+*/
