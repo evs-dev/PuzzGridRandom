@@ -44,6 +44,10 @@ function addHistoryLink(gridNumber, url) {
     // Make the URL the PuzzGrid link
     a.href = url;
 
-    // Append the link to the history div
-    window.historyDiv.appendChild(a);
+    let div = window.historyDiv;
+
+    // Insert a break as the first element in the history div
+    div.insertBefore(document.createElement('br'), div.childNodes[0]);
+    // Insert the link as the first element in the history div
+    div.insertBefore(a, div.childNodes[0]);
 }
