@@ -42,7 +42,10 @@ button:hover {
 }
 
 .historyDiv {
-    
+    height: 80vh;
+    top: 50%;
+    float: right;
+    padding-top: 20vh;
 }
 
 /* LINKS */
@@ -50,6 +53,7 @@ button:hover {
 a {
     font-family: Georgia;
     color: white;
+    text-align: right;
 }
 
 /* Visited */
