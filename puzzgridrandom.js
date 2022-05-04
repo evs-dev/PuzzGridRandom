@@ -1,6 +1,6 @@
 const baseURL = "https://www.puzzgrid.com/grid/";
-const maxGrids = 31728; // Approximate number of grids on PuzzGrid
-                        // Last updated: 01/06/2020
+const maxGrids = 63288; // Approximate number of grids on PuzzGrid
+                        // Last updated: 04/05/2022
 
 let previousNumbers = [];
 
